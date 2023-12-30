@@ -8,6 +8,7 @@ import { DataContext } from '../../context/DataProvider';
 
 import { useNavigate } from 'react-router-dom';
 
+
 const Component = styled(Box)`
     width: 400px;
     margin: auto;
@@ -75,7 +76,7 @@ const signupInitialValue = {
 
 const Login = ({ isUserAuthenticated }) => {
 
-    const imageURL = 'https://www.kindpng.com/picc/m/197-1971136_blog-icon-png-png-download-icon-blog-green.png';
+    const imageURL = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT61KAtxUgmQmhzEQxK3NnyuCz7McE3rCE27Uh5liccrjioan7rMOBHgW-ha4hoigPxlLQ&usqp=CAU';
 
     const [account , toggleAccount] = useState('login');
     
@@ -149,9 +150,9 @@ const Login = ({ isUserAuthenticated }) => {
                     </Wrapper>
                 :
                     <Wrapper>
-                        <TextField variant="standard" onChange={(e) => onInputChange(e)} name='name' label="Enter Name"/>
-                        <TextField variant="standard" onChange={(e) => onInputChange(e)} name='username' label="Enter user Name"/>
-                        <TextField variant="standard" onChange={(e) => onInputChange(e)} name='password' label="Enter Password"/>
+                        <TextField variant="standard" onChange={(e) => onInputChange(e)} name="name" label="Enter Name"/>
+                        <TextField variant="standard" onChange={(e) => onInputChange(e)} name="username" label="Enter user Name"/>
+                        <TextField variant="standard" onChange={(e) => onInputChange(e)} name="password" label="Enter Password"/>
 
                         {error && <Error>{error}</Error>}
                         <SignupButton onClick={() => signupUser()}>SignUp</SignupButton>

@@ -15,9 +15,9 @@ export const signupUser = async (request , response) =>{
 
         const user = { username: request.body.username, name: request.body.name, password: hashedPassword };
 
-        const newUser = new User(user);
+        const newUser = new User(user); //validate from model -> user 
 
-        await newUser.save();
+        await newUser.save(); // save in database  
 
         return response.status(200).json({msg:'SignUp successful'});
     }

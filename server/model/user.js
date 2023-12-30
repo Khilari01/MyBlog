@@ -16,6 +16,6 @@ const userSchema = mongoose.Schema({
     }
 })
 
-const user = mongoose.model('user', userSchema);
+const user = mongoose.model('user', userSchema); //restriction on values to be stored in "use" schema
 
 export default user;
