@@ -11,7 +11,11 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: ["https://deploy-mern-1whq.vercel.app"],
+    methods: ["POST","GET"],
+    credentials: true
+}));
 app.use(bodyParser.json({extended: true}));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/' , Router);
